@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasaha Technology - Fasaha don Ci Gaban Al'umma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-white text-gray-800;
+        }
+        .text-primary-blue { color: #0056b3; }
+        .bg-primary-blue { background-color: #0056b3; }
+        .text-secondary-green { color: #28a745; }
+        .bg-secondary-green { background-color: #28a745; }
+        .shadow-ha { box-shadow: 0 4px 6px rgba(0, 86, 179, 0.1), 0 1px 3px rgba(0, 86, 179, 0.08); }
+        .language-switcher {
+            cursor: pointer;
+            @apply p-2 rounded-full border-2 border-primary-blue text-primary-blue transition-colors duration-300 hover:bg-primary-blue hover:text-white;
+        }
+        .hamburger-menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 6rem;
+                right: 1rem;
+                @apply bg-white shadow-ha p-4 rounded-lg w-48 z-50;
+            }
+            .hamburger-menu {
+                display: block;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body data-lang="ha" class="leading-relaxed">
+    <header class="bg-white shadow-ha fixed top-0 left-0 w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary-blue rounded-lg">Fasaha <span class="text-secondary-green">Technology</span></a>
+            <div class="flex items-center space-x-4">
+                <ul class="nav-menu hidden md:flex space-x-6">
+                    <li><a href="#gida" class="font-medium hover:text-primary-blue transition-colors duration-300 rounded-lg" data-key="nav-home">Shafin Farko</a></li>
+                    <li><a href="#game-da-mu" class="font-medium hover:text-primary-blue transition-colors duration-300 rounded-lg" data-key="nav-about">Game da Mu</a></li>
+                    <li><a href="#ayyuka" class="font-medium hover:text-primary-blue transition-colors duration-300 rounded-lg" data-key="nav-services">Ayyuka</a></li>
+                    <li><a href="#ayyukan-da-aka-yi" class="font-medium hover:text-primary-blue transition-colors duration-300 rounded-lg" data-key="nav-projects">Ayyukan da Aka Yi</a></li>
+                    <li><a href="#blog" class="font-medium hover:text-primary-blue transition-colors duration-300 rounded-lg" data-key="nav-blog">Blog</a></li>
+                    <li><a href="#hotuna" class="font-medium hover:text-primary-blue transition-colors duration-300 rounded-lg" data-key="nav-gallery">Hotuna</a></li>
+                    <li><a href="#tuntube-mu" class="font-medium hover:text-primary-blue transition-colors duration-300 rounded-lg" data-key="nav-contact">Tuntuɓe Mu</a></li>
+                </ul>
+                <button id="lang-toggle" class="language-switcher text-sm font-semibold rounded-full">EN</button>
+                <button id="hamburger-btn" class="hamburger-menu p-2 focus:outline-none">
+                    <svg class="w-6 h-6 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mt-24">
+        <!-- Home Section -->
+        <section id="gida" class="relative bg-primary-blue text-white py-16 md:py-24 rounded-bl-3xl rounded-br-3xl">
+            <div class="container mx-auto px-4 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-3xl md:text-5xl font-extrabold mb-4 rounded-lg" data-key="home-title">Fasaha don Al’umma, Ilimi don Ci gaba.</h1>
+                    <p class="text-lg md:text-xl mb-8 rounded-lg" data-key="home-subtitle">Muna amfani da fasaha don inganta ilimi, kasuwanci, da ci gaban al'umma a Nijar da faɗin Afirka.</p>
+                    <p class="mb-8 rounded-lg" data-key="home-intro">Fasaha Technology kamfani ne mai himma wajen samar da ci gaba mai ɗorewa ta hanyar fasahar zamani. Mun yi imanin cewa fasaha hanya ce ta canji, kuma muna aiki tuƙuru don ganin an yi amfani da ita wajen inganta rayuwar al'umma.</p>
+                </div>
+                <div class="text-left mt-12 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4 rounded-lg" data-key="home-mission-title">Manufarmu (Mission Statement)</h2>
+                    <p class="text-lg rounded-lg" data-key="home-mission">Manufarmu ita ce samar da ci gaba mai ɗorewa ta hanyar fasaha da kuma bai wa al'umma damar gina makoma mai haske.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="game-da-mu" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-primary-blue rounded-lg" data-key="about-title">Game da Mu</h2>
+                <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                    <div class="p-6 bg-white rounded-2xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-secondary-green rounded-lg" data-key="about-vision-title">Hangon Nesa (Vision)</h3>
+                        <p class="rounded-lg" data-key="about-vision-text">Burinmu shine zama kan gaba wajen samar da mafita ta fasaha wacce za ta kawo sauyi mai ɗorewa ga ilimi da kasuwanci a Afirka.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-secondary-green rounded-lg" data-key="about-mission-title-2">Manufar (Mission)</h3>
+                        <p class="rounded-lg" data-key="about-mission-text-2">Manufarmu ita ce bayar da fasahar zamani da horo mai inganci don ƙarfafa da bunƙasa al'umma.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-secondary-green rounded-lg" data-key="about-story-title">Labarinmu (Our Story)</h3>
+                        <p class="rounded-lg" data-key="about-story-text">An kafa Fasaha Technology ne da manufar cike gibin da ake samu a fannin fasaha a Nijar. Tun lokacin, mun yi nasarar gudanar da ayyuka da dama waɗanda suka kawo sauyi a rayuwar mutane.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="ayyuka" class="py-16 md:py-24 bg-gray-100 rounded-tl-3xl rounded-tr-3xl">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-primary-blue rounded-lg" data-key="services-title">Ayyukanmu</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="p-6 bg-white rounded-2xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-primary-blue rounded-lg" data-key="service-1-title">Horar da Fasahar Zamani</h3>
+                        <p class="text-sm text-gray-600 rounded-lg" data-key="service-1-text">Muna horar da mutane kan amfani da fasaha, daga mataki na farko zuwa ƙwararru. Wannan ya haɗa da horarwa kan Microsoft Office, coding, da amfani da intanet da sauransu.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-primary-blue rounded-lg" data-key="service-2-title">Shirin Makarantar Zamani</h3>
+                        <p class="text-sm text-gray-600 rounded-lg" data-key="service-2-text">Muna haɗin gwiwa da makarantu don samar musu da kayan aikin fasaha da manhajoji don inganta koyo da koyarwa.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-primary-blue rounded-lg" data-key="service-3-title">Hanyoyin Kasuwanci da E-commerce</h3>
+                        <p class="text-sm text-gray-600 rounded-lg" data-key="service-3-text">Muna taimaka wa 'yan kasuwa su gina kasuwancinsu ta hanyar fasaha. Wannan ya haɗa da gina shafukan yanar gizo, sarrafa kafafen sada zumunta, da horarwa kan harkokin kasuwanci na zamani.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-primary-blue rounded-lg" data-key="service-4-title">Cibiyar Ƙirƙire-ƙirƙire ta Al'umma</h3>
+                        <p class="text-sm text-gray-600 rounded-lg" data-key="service-4-text">Muna da cibiya inda matasa da 'yan kasuwa ke iya haɗuwa, koyo, da kuma gudanar da sabbin ayyuka da za su amfani al'umma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="ayyukan-da-aka-yi" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-primary-blue rounded-lg" data-key="projects-title">Ayyukan da Aka Yi</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://placehold.co/600x400/0056b3/ffffff?text=Smart+Town+Tessaoua" alt="Smart Town Tessaoua" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-primary-blue rounded-lg" data-key="project-1-title">Smart Town Tessaoua</h3>
+                            <p class="text-sm text-gray-600 rounded-lg" data-key="project-1-text">Wannan wani aiki ne mai muhimmanci da muke yi don maida garin Tessaoua a matsayin wani gari na zamani ta hanyar fasaha.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://placehold.co/600x400/28a745/ffffff?text=Horar+da+Mata+da+Matasa" alt="Horar da Mata da Matasa" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-primary-blue rounded-lg" data-key="project-2-title">Horar da Mata da Matasa</h3>
+                            <p class="text-sm text-gray-600 rounded-lg" data-key="project-2-text">Wannan shiri na da manufar ƙarfafa mata da matasa ta hanyar ba su ilimi da horo kan fasahar zamani.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://placehold.co/600x400/0056b3/ffffff?text=Shirin+Makarantar+Zamani" alt="Shirin Makarantar Zamani" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-primary-blue rounded-lg" data-key="project-3-title">Shirin Makarantar Zamani</h3>
+                            <p class="text-sm text-gray-600 rounded-lg" data-key="project-3-text">Muna taimakawa makarantu don inganta tsarin karatunsu ta hanyar fasaha, da samar da komfuta da intanet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-16 md:py-24 bg-gray-100 rounded-bl-3xl rounded-br-3xl">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-primary-blue rounded-lg" data-key="blog-title">Blog / Albarkatu</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-white rounded-2xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-primary-blue rounded-lg" data-key="blog-post-1-title">Hanyoyi 5 na Inganta Kwarewar Computer</h3>
+                        <p class="text-sm text-gray-600 rounded-lg" data-key="blog-post-1-text">Labari na farko game da yadda mutum zai iya inganta iliminsa a kan amfani da fasahar computer. Akwai dabaru da yawa da za a yi amfani da su don zama ƙwararre a wannan fanni.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-primary-blue rounded-lg" data-key="blog-post-2-title">Me Yasa Ya Kamata Ka Koyi Coding a Yau</h3>
+                        <p class="text-sm text-gray-600 rounded-lg" data-key="blog-post-2-text">Wannan labarin zai bayyana fa'idodin koyon coding da kuma dalilan da ya sa kowa ya kamata ya yi la'akari da shi a matsayin wata hanya ta samun ci gaba.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery Section -->
+        <section id="hotuna" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-primary-blue rounded-lg" data-key="gallery-title">Hotuna</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 rounded-lg">
+                    <img src="https://placehold.co/400x300/0056b3/ffffff?text=Event+1" alt="Hoton Taron" class="w-full h-48 object-cover rounded-xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x300/28a745/ffffff?text=Training" alt="Hoton Horarwa" class="w-full h-48 object-cover rounded-xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x300/0056b3/ffffff?text=Students" alt="Hoton Dalibai" class="w-full h-48 object-cover rounded-xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x300/28a745/ffffff?text=Projects" alt="Hoton Ayyuka" class="w-full h-48 object-cover rounded-xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x300/0056b3/ffffff?text=Team" alt="Hoton Ma'aikata" class="w-full h-48 object-cover rounded-xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x300/28a745/ffffff?text=Workshop" alt="Hoton Taron Bita" class="w-full h-48 object-cover rounded-xl shadow-ha transform transition-transform duration-300 hover:scale-105">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="tuntube-mu" class="py-16 md:py-24 bg-primary-blue text-white rounded-tl-3xl rounded-tr-3xl">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 rounded-lg" data-key="contact-title">Tuntuɓe Mu</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <p class="mb-4 rounded-lg" data-key="contact-info">
+                            Adireshi: Tessaoua, Niamey, Nijar<br>
+                            Lambar Waya: +227 89630458<br>
+                            Imel: info@fasahatech.com
+                        </p>
+                        <div class="flex space-x-4 mb-8">
+                            <a href="https://wa.me/22796123456" target="_blank" class="bg-secondary-green p-2 rounded-full transform transition-transform duration-300 hover:scale-110">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9l-5 5-5-5"></path></svg>
+                            </a>
+                            <a href="https://facebook.com/fasahatech" target="_blank" class="bg-white text-primary-blue p-2 rounded-full transform transition-transform duration-300 hover:scale-110">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.35c0 .732.593 1.325 1.325 1.325h11.455v-9.293h-3.13v-3.626h3.13v-2.693c0-3.1 1.893-4.787 4.659-4.787 1.325 0 2.463.099 2.793.143v3.259l-1.938.001c-1.517 0-1.815.722-1.815 1.78v2.339h3.626l-.472 3.626h-3.154v9.293h6.082c.732 0 1.325-.593 1.325-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/fasahatech" target="_blank" class="bg-white text-primary-blue p-2 rounded-full transform transition-transform duration-300 hover:scale-110">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.529v-5.602c0-1.311-.026-2.999-1.829-2.999-1.832 0-2.112 1.424-2.112 2.906v5.695h-3.529v-11.85h3.385v1.655h.047c.469-.887 1.621-1.819 3.336-1.819 3.567 0 4.226 2.348 4.226 5.4v6.614zM4.362 8.35c-1.157 0-1.916-.764-1.916-1.745 0-1.002.759-1.745 1.916-1.745s1.916.743 1.916 1.745c-.001.98-.759 1.745-1.916 1.745zM6.168 20.452h-3.528v-11.85h3.528v11.85z"/></svg>
+                            </a>
+                            <a href="https://youtube.com/c/fasahatech" target="_blank" class="bg-white text-primary-blue p-2 rounded-full transform transition-transform duration-300 hover:scale-110">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.84 6.74c-.26-.975-.98-1.724-1.95-1.99-1.71-.482-8.58-1.528-19.46-.86l-2.02.04c-1.32.26-2.22 1.31-2.22 2.65v5.33c0 1.34.9 2.39 2.22 2.65l2.02.04c10.88.668 17.75-.38 19.46-.86.97-.266 1.69-1.015 1.95-1.99.39-1.44.57-2.98.57-4.52s-.18-3.08-.57-4.52zM15.42 12.08l-6.2 3.6c-.19.11-.42.02-.54-.17-.11-.19-.02-.42.17-.54l6.03-3.5-6.03-3.5c-.19-.11-.28-.35-.17-.54s.35-.28.54-.17l6.2 3.6c.19.11.28.35.17.54s-.35.28-.54.17z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <form id="contact-form" class="bg-white p-6 rounded-2xl shadow-ha text-gray-800">
+                            <h3 class="text-xl font-semibold mb-4 text-primary-blue rounded-lg" data-key="form-title">Tuntube Mu</h3>
+                            <div class="mb-4">
+                                <label 
